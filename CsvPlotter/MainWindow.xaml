@@ -17,11 +17,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-
-        <!-- ========================================================= -->
-        <!-- TOP ROW : FILE / ROW / RESOLUTION                         -->
-        <!-- ========================================================= -->
-
         <Grid Grid.Row="0" Margin="0,0,0,8">
 
             <Grid.ColumnDefinitions>
@@ -102,10 +97,7 @@
         </Grid>
 
 
-        <!-- ========================================================= -->
-        <!-- SECOND ROW : TIME / CHART / FILTER                       -->
-        <!-- ========================================================= -->
-
+      
         <Grid Grid.Row="1" Margin="0,0,0,8">
 
             <Grid.ColumnDefinitions>
@@ -119,14 +111,14 @@
 
 
             <RadioButton Grid.Column="0"
-                         Content="Standard Time"
+                         Content="Standard Values"
                          GroupName="TimeMode"
                          Margin="0,0,15,0"
                          Checked="StandardTime_Checked"/>
 
 
             <RadioButton Grid.Column="1"
-                         Content="Normalised Time"
+                         Content="Normalised Values"
                          GroupName="TimeMode"
                          IsChecked="True"
                          Checked="NormalisedTime_Checked"/>
@@ -160,10 +152,6 @@
                     Margin="10,0,0,0"
                     Click="Filter_Click"/>
 
-
-            <!-- ===================================================== -->
-            <!-- FILTER POPUP                                         -->
-            <!-- ===================================================== -->
 
             <Popup x:Name="FilterPopUp"
                    PlacementTarget="{Binding ElementName=FilterButton}"
@@ -209,10 +197,7 @@
         </Grid>
 
 
-        <!-- ========================================================= -->
-        <!-- MAIN AREA                                                 -->
-        <!-- ========================================================= -->
-
+     
         <Grid Grid.Row="2">
 
             <Grid.ColumnDefinitions>
@@ -221,10 +206,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
-            <!-- ===================================================== -->
-            <!-- LEFT PARAMETER PANEL                                  -->
-            <!-- ===================================================== -->
 
             <Border Grid.Column="0"
                     BorderBrush="Gray"
@@ -237,10 +218,7 @@
                     <StackPanel>
 
 
-                        <!-- ========================================= -->
-                        <!-- CURSOR INFORMATION                        -->
-                        <!-- ========================================= -->
-
+                      
                         <Border BorderBrush="LightGray"
                                 BorderThickness="1"
                                 Padding="5"
@@ -300,9 +278,7 @@
                         </Border>
 
 
-                        <!-- ========================================= -->
-                        <!-- PARAMETER LIST                            -->
-                        <!-- ========================================= -->
+            
 
                         <TextBlock Text="Parameters"
                                    FontWeight="Bold"
@@ -327,9 +303,6 @@
                           ResizeBehavior="PreviousAndNext"/>
 
 
-            <!-- ===================================================== -->
-            <!-- PLOT AREA                                             -->
-            <!-- ===================================================== -->
 
             <Border Grid.Column="2"
                     BorderBrush="Gray"
@@ -344,6 +317,7 @@
                                        Visibility="Visible"/>
 
 
+                    <!-- STACKED PLOTS -->
 
                     <ScrollViewer x:Name="StackedPlotScrollViewer"
                                   Visibility="Collapsed"
@@ -362,9 +336,6 @@
         </Grid>
 
 
-        <!-- ========================================================= -->
-        <!-- BOTTOM STATUS                                            -->
-        <!-- ========================================================= -->
 
         <Grid Grid.Row="3"
               Margin="0,8,0,0">
