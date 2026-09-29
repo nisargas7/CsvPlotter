@@ -1315,7 +1315,6 @@ private void StackedPlot_MouseMove(
                         columnIndex];
                 }
             }
-
             return null;
         }
     }

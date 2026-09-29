@@ -9,7 +9,6 @@ namespace CsvPlotter.Helpers
         {
             if (string.IsNullOrWhiteSpace(time))
                 return double.NaN;
-
             try
             {
                 string[] tempStr = time.Split(':');
